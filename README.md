@@ -21,6 +21,10 @@ Clone this repository, then [download composer](https://getcomposer.org/download
 ## Usage
 
 Just call the `generator.php` script with the secret to encrypt as a parameter. It will then output the encrypted
-secret suitable for storage in the user's entry in the directory.
+secret suitable for storage in the user's entry in the directory:
+
+```
+php generator.php ABCDEFGHIJ234567
+```
 
 For help on how to deploy encrypted secrets to the user's directory, see the *Feide two-factor deployment guide*.
