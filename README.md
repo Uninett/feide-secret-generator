@@ -20,11 +20,24 @@ Clone this repository, then [download composer](https://getcomposer.org/download
 
 ## Usage
 
-Just call the `generator.php` script with the secret to encrypt as a parameter. It will then output the encrypted
-secret suitable for storage in the user's entry in the directory:
+Just call the `generator.php` script and it will output an encrypted secret suitable for storage in the user's entry
+in the directory, as well as a QR code that can be scanned by an authenticator application:
 
 ```
-php generator.php ABCDEFGHIJ234567
+php generator.php
+```
+
+You can also specify the secret you would like to use, as well as a label to be added to the secret and the QR code.
+Use the following command line options:
+
+* `-l` (or `--label`) to specify a label.
+* `-s` (or `--secret`) to specify the secret.
+
+For example:
+
+```
+php generator.php --secret ABCDEFGHIJ234567 --label "My Code Generator"
 ```
 
 For help on how to deploy encrypted secrets to the user's directory, see the *Feide two-factor deployment guide*.
+
